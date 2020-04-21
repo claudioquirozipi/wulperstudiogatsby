@@ -1,3 +1,9 @@
 import React from "react"
+import Studio from "../view/studio"
+import NormalTemplate from "../template/NormalTemplat"
 
-export default () => <div>Hello world!</div>
+export default () => (
+  <NormalTemplate>
+    <Studio />
+  </NormalTemplate>
+)
