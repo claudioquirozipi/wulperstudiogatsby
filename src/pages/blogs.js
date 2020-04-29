@@ -5,7 +5,7 @@ import Layout from "../components/Layout"
 import SEO from "../components/Seo"
 
 const BlogsPage = ({ data }) => {
-  console.log("aquí data", data.allStrapiPost.edges)
+  // console.log("aquí data", data.allStrapiPost.edges)
   return (
     <Layout>
       <SEO />

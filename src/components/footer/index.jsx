@@ -12,10 +12,10 @@ import {
   ContainerDesktop,
 } from "./styled"
 //img
-import iconWeb from "../../../static/img/footer/web.svg"
-import iconWeb2 from "../../../static/img/footer/web2.svg"
+import iconWeb from "../../../static/footerWeb.svg"
+import iconWeb2 from "../../../static/footerWeb2.svg"
 
-function Footer(props) {
+function Footer() {
   return (
     <ContainerFooter>
       <h3>Contact Us</h3>

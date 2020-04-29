@@ -1,7 +1,6 @@
 import React, { useState } from "react"
 import { Link } from "gatsby"
-import { baseURL } from "../../../config/url"
-
+import { url } from "../../config/url"
 //Styled Components
 import {
   ContainerSlyder,
@@ -20,24 +19,24 @@ function Slyder(props) {
   const lastBlog = blogs.length
   const valorInicial = [
     {
-      titulo: blogs[lastBlog - 1].title,
-      parrafo: blogs[lastBlog - 1].description,
+      titulo: blogs[lastBlog - 1].node.title,
+      parrafo: blogs[lastBlog - 1].node.description,
       positionX: "0%",
       button1: true,
       button2: false,
       button3: false,
     },
     {
-      titulo: blogs[lastBlog - 2].title,
-      parrafo: blogs[lastBlog - 2].description,
+      titulo: blogs[lastBlog - 2].node.title,
+      parrafo: blogs[lastBlog - 2].node.description,
       positionX: "-100%",
       button1: false,
       button2: true,
       button3: false,
     },
     {
-      titulo: blogs[lastBlog - 3].title,
-      parrafo: blogs[lastBlog - 3].description,
+      titulo: blogs[lastBlog - 3].node.title,
+      parrafo: blogs[lastBlog - 3].node.description,
       positionX: "-200%",
       button1: false,
       button2: false,
@@ -71,29 +70,35 @@ function Slyder(props) {
       <Container2>
         <SlyderSC left={valor.positionX}>
           <Link
-            to={`blog/${blogs[lastBlog - 1].url}/${blogs[lastBlog - 1].id}`}
+            to={`blog/${blogs[lastBlog - 1].node.url}/${
+              blogs[lastBlog - 1].id
+            }`}
           >
-            <img src={baseURL + blogs[lastBlog - 1].image[0].url} alt="" />
+            <img src={url + blogs[lastBlog - 1].node.image[0].url} alt="" />
           </Link>
           <Link
-            to={`blog/${blogs[lastBlog - 2].url}/${blogs[lastBlog - 2].id}`}
+            to={`blog/${blogs[lastBlog - 2].node.url}/${
+              blogs[lastBlog - 2].id
+            }`}
           >
-            <img src={baseURL + blogs[lastBlog - 2].image[0].url} alt="" />
+            <img src={url + blogs[lastBlog - 2].node.image[0].url} alt="" />
           </Link>
           <Link
-            to={`blog/${blogs[lastBlog - 3].url}/${blogs[lastBlog - 3].id}`}
+            to={`blog/${blogs[lastBlog - 3].node.url}/${
+              blogs[lastBlog - 3].id
+            }`}
           >
-            <img src={baseURL + blogs[lastBlog - 3].image[0].url} alt="" />
+            <img src={url + blogs[lastBlog - 3].node.image[0].url} alt="" />
           </Link>
         </SlyderSC>
       </Container2>
       <Container3>
-        <img src={baseURL + blogs[lastBlog - 4].image[0].url} alt="" />
-        <SubTitle>{blogs[lastBlog - 4].title}</SubTitle>
+        <img src={url + blogs[lastBlog - 4].node.image[0].url} alt="" />
+        <SubTitle>{blogs[lastBlog - 4].node.title}</SubTitle>
       </Container3>
       <Container4>
-        <img src={baseURL + blogs[lastBlog - 5].image[0].url} alt="" />
-        <SubTitle>{blogs[lastBlog - 5].title}</SubTitle>
+        <img src={url + blogs[lastBlog - 5].node.image[0].url} alt="" />
+        <SubTitle>{blogs[lastBlog - 5].node.title}</SubTitle>
       </Container4>
     </ContainerSlyder>
   )
