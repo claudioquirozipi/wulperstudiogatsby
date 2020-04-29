@@ -29,7 +29,7 @@ function Footer(props) {
           <br />
           Studio@wulpers.com
           <br /> <a href="https://wulpers.com/"> Wulpers Co.</a>
-          <br /> <Link to="/blog"> Wulpers news</Link>
+          <br /> <Link to="/blogs"> Wulpers news</Link>
         </p>
         <ContainerRedes>
           <a href="https://dribbble.com/wulpers">

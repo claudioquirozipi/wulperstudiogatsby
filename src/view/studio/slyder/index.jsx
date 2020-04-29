@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-
+import { Link } from "gatsby"
 import { baseURL } from "../../../config/url"
 
 //Styled Components
@@ -16,7 +16,7 @@ import {
 } from "./styled"
 
 function Slyder(props) {
-  const { history, blogs } = props
+  const { blogs } = props
   const lastBlog = blogs.length
   const valorInicial = [
     {
@@ -54,10 +54,6 @@ function Slyder(props) {
   function Button3() {
     cambiarValor(valorInicial[2])
   }
-  function historyPush(url) {
-    history.push(url)
-    window.scrollTo(0, 0)
-  }
 
   return (
     <ContainerSlyder>
@@ -74,33 +70,21 @@ function Slyder(props) {
       </Container1>
       <Container2>
         <SlyderSC left={valor.positionX}>
-          <span
-            onClick={() =>
-              historyPush(
-                `blog/${blogs[lastBlog - 1].url}/${blogs[lastBlog - 1].id}`
-              )
-            }
+          <Link
+            to={`blog/${blogs[lastBlog - 1].url}/${blogs[lastBlog - 1].id}`}
           >
             <img src={baseURL + blogs[lastBlog - 1].image[0].url} alt="" />
-          </span>
-          <span
-            onClick={() =>
-              historyPush(
-                `blog/${blogs[lastBlog - 2].url}/${blogs[lastBlog - 2].id}`
-              )
-            }
+          </Link>
+          <Link
+            to={`blog/${blogs[lastBlog - 2].url}/${blogs[lastBlog - 2].id}`}
           >
             <img src={baseURL + blogs[lastBlog - 2].image[0].url} alt="" />
-          </span>
-          <span
-            onClick={() =>
-              historyPush(
-                `blog/${blogs[lastBlog - 3].url}/${blogs[lastBlog - 3].id}`
-              )
-            }
+          </Link>
+          <Link
+            to={`blog/${blogs[lastBlog - 3].url}/${blogs[lastBlog - 3].id}`}
           >
             <img src={baseURL + blogs[lastBlog - 3].image[0].url} alt="" />
-          </span>
+          </Link>
         </SlyderSC>
       </Container2>
       <Container3>

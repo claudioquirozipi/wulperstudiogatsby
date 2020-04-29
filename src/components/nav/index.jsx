@@ -7,12 +7,9 @@ import { NavContainer } from "./styled"
 import imgHome from "./img/home.svg"
 
 function NavCQ(props) {
-  const { history, bgNav, imgNav, imgAlt, imgUrl, links } = props
+  const { bgNav, imgNav, imgAlt, imgUrl, links } = props
   const myImg = imgNav ? imgNav : imgHome
-  function historyPush(url) {
-    history.push(url)
-    window.scrollTo(0, 0)
-  }
+
   return (
     <NavContainer bgNav={bgNav}>
       <Link to={imgUrl}>

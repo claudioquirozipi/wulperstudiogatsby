@@ -1,5 +1,25 @@
 module.exports = {
+  siteMetadata: {
+    title: `Wulpers Studio - UI/UX for digital projects`,
+    author: {
+      name: `Claudio Quiroz`,
+      summary: `Ingeniero industrial y desarrollador frontend`,
+    },
+    description: `We are a digital studio capable of transforming an idea into a mindblowing project.`,
+    siteUrl: `https://wulperstudio.com`,
+    keywords: `App design, UI, UX, Software development, Sofware factory, Software interfase. Diseño de apps, diseño de interfases, experiencia de usuario, empresa de software,`,
+    social: {
+      twitter: ``,
+    },
+  },
   plugins: [
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/static`,
+        name: `static`,
+      },
+    },
     {
       resolve: `gatsby-plugin-styled-components`,
       options: {

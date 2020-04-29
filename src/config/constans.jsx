@@ -1,1 +1,1 @@
-export const url = "https://wulperstudio.com/";
+export const url = "https://wulperstudio.com"

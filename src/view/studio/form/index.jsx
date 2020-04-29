@@ -60,8 +60,8 @@ async function handleSubmit(
   }
 }
 
-function Form(props) {
-  const [addTodo, { data }] = useMutation(CREATE_CONTACT)
+function Form() {
+  const [addTodo] = useMutation(CREATE_CONTACT)
   const [phone, setPhone] = useState("")
   const [email, setEmail] = useState("")
   const [web, setWeb] = useState("")

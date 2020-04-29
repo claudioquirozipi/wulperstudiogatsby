@@ -4,9 +4,6 @@ import { url } from "../../config/constans"
 // Styled-Components
 import { BlogsContainer, TitleBlog } from "./styled"
 
-const myImg =
-  "https://lifestyle.americaeconomia.com/sites/lifestyle.americaeconomia.com/files/styles/gallery_image/public/pexels-photo-248797.jpeg?itok=P7FpC4nZ"
-
 function BlogsCQ(props) {
   const { data } = props
 
